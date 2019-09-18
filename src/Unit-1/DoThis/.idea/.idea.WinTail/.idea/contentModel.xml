@@ -5,9 +5,12 @@
       <e p="packages" t="ExcludeRecursive" />
       <e p="WinTail.sln" t="IncludeFlat" />
       <e p="WintTail" t="IncludeRecursive">
+        <e p="ActorMetaData.cs" t="Include" />
         <e p="bin" t="ExcludeRecursive" />
         <e p="ConsoleReaderActor.cs" t="Include" />
         <e p="ConsoleWriterActor.cs" t="Include" />
+        <e p="FileObserver.cs" t="Include" />
+        <e p="FileValidatorActor.cs" t="Include" />
         <e p="Messages.cs" t="Include" />
         <e p="obj" t="ExcludeRecursive">
           <e p="Debug" t="Include">
@@ -17,11 +20,13 @@
           </e>
         </e>
         <e p="Program.cs" t="Include" />
-        <e p="ValidationActor.cs" t="Include" />
+        <e p="sample_log_file.txt" t="Include" />
+        <e p="TailActor.cs" t="Include" />
+        <e p="TailCoordinatorActor.cs" t="Include" />
         <e p="WintTail.csproj" t="IncludeRecursive" />
       </e>
     </e>
-    <e p="$USER_HOME$/Library/Caches/Rider2019.1/extResources" t="IncludeRecursive" />
-    <e p="$USER_HOME$/Library/Caches/Rider2019.1/resharper-host/local/Transient/ReSharperHost/v191/SolutionCaches/_WinTail.894035224.00" t="ExcludeRecursive" />
+    <e p="$USER_HOME$/Library/Caches/Rider2019.2/extResources" t="IncludeRecursive" />
+    <e p="$USER_HOME$/Library/Caches/Rider2019.2/resharper-host/local/Transient/ReSharperHost/v192/SolutionCaches/_WinTail.894035224.00" t="ExcludeRecursive" />
   </component>
 </project>

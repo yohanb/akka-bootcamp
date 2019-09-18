@@ -2,10 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bf29aca9-20dc-4148-be8a-4b943bc0c158" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/WintTail/ValidationActor.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WintTail/ActorMetaData.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WintTail/FileObserver.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WintTail/TailActor.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WintTail/TailCoordinatorActor.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WintTail/sample_log_file.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.WinTail/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.WinTail/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.WinTail/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.WinTail/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/WintTail/ConsoleReaderActor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WintTail/ConsoleReaderActor.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/WintTail/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WintTail/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WintTail/ValidationActor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WintTail/FileValidatorActor.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WintTail/WintTail.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/WintTail/WintTail.csproj" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -13,127 +20,18 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/WintTail/Messages.cs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="938">
-              <caret line="68" column="5" selection-start-line="68" selection-start-column="5" selection-end-line="68" selection-end-column="5" />
-              <folding>
-                <marker date="1568772960542" expanded="true" signature="17:1565" ph="{...}" />
-                <marker date="1568772960542" expanded="true" signature="45:1563" ph="{...}" />
-                <marker date="1568772960542" expanded="true" signature="60:266" ph="Neutral/system messages" />
-                <marker date="1568772960542" expanded="true" signature="101:186" ph="/// Marker class to continue processing. ... " />
-                <marker date="1568772960542" expanded="true" signature="226:246" ph="{...}" />
-                <marker date="1568772960542" expanded="true" signature="276:649" ph="Success messages" />
-                <marker date="1568772960542" expanded="true" signature="310:411" ph="/// Base class for signalling that user input was valid. ... " />
-                <marker date="1568772960542" expanded="true" signature="445:629" ph="{...}" />
-                <marker date="1568772960542" expanded="true" signature="502:563" ph="{...}" />
-                <marker date="1568772960542" expanded="true" signature="659:1557" ph="Error messages" />
-                <marker date="1568772960542" expanded="true" signature="691:794" ph="/// Base class for signalling that user input was invalid. ... " />
-                <marker date="1568772960542" expanded="true" signature="826:1008" ph="{...}" />
-                <marker date="1568772960542" expanded="true" signature="881:942" ph="{...}" />
-                <marker date="1568772960542" expanded="true" signature="1018:1093" ph="/// User provided blank input. ... " />
-                <marker date="1568772960542" expanded="true" signature="1142:1254" ph="{...}" />
-                <marker date="1568772960542" expanded="true" signature="1216:1244" ph="{...}" />
-                <marker date="1568772960542" expanded="true" signature="1264:1374" ph="/// User provided invalid input (currently, input w/ odd ## chars) ... " />
-                <marker date="1568772960542" expanded="true" signature="1424:1537" ph="{...}" />
-                <marker date="1568772960542" expanded="true" signature="1499:1527" ph="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/WintTail/ConsoleReaderActor.cs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="474">
-              <caret line="45" column="9" lean-forward="true" selection-start-line="45" selection-start-column="9" selection-end-line="45" selection-end-column="9" />
-              <folding>
-                <marker date="1568775883488" expanded="false" signature="6:31" ph="..." />
-                <marker date="1568775883488" expanded="true" signature="50:1727" ph="{...}" />
-                <marker date="1568775883488" expanded="true" signature="57:220" ph="/// Actor responsible for reading FROM the console.  ... " />
-                <marker date="1568775883488" expanded="true" signature="264:1725" ph="{...}" />
-                <marker date="1568775883488" expanded="true" signature="478:546" ph="{...}" />
-                <marker date="1568775883488" expanded="true" signature="605:774" ph="{...}" />
-                <marker date="1568775883488" expanded="true" signature="661:728" ph="{...}" />
-                <marker date="1568775883488" expanded="true" signature="818:1402" ph="{...}" />
-                <marker date="1568775883488" expanded="true" signature="1013:1237" ph="{...}" />
-                <marker date="1568775883488" expanded="true" signature="1044:1155" ph="/* if user typed ExitCommand, shut down the entire actor ... */" />
-                <marker date="1568775883488" expanded="true" signature="1251:1348" ph="/* otherwise, just hand message off to validation actor ... */" />
-                <marker date="1568775883488" expanded="true" signature="1446:1719" ph="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/WintTail/ValidationActor.cs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="601">
-              <caret line="43" column="59" lean-forward="true" selection-start-line="43" selection-start-column="59" selection-end-line="43" selection-end-column="59" />
-              <folding>
-                <marker date="1568775254269" expanded="true" signature="58:1891" ph="{...}" />
-                <marker date="1568775254269" expanded="true" signature="65:167" ph="/// Actor that validates user input and signals result to others. ... " />
-                <marker date="1568775254269" expanded="true" signature="215:1889" ph="{...}" />
-                <marker date="1568775254269" expanded="true" signature="339:413" ph="{...}" />
-                <marker date="1568775254269" expanded="true" signature="472:1503" ph="{...}" />
-                <marker date="1568775254269" expanded="true" signature="566:773" ph="{...}" />
-                <marker date="1568775254269" expanded="true" signature="790:1313" ph="{...}" />
-                <marker date="1568775254269" expanded="true" signature="873:1069" ph="{...}" />
-                <marker date="1568775254269" expanded="true" signature="1090:1299" ph="{...}" />
-                <marker date="1568775254269" expanded="true" signature="1327:1432" ph="/* tell sender to continue doing its thing ... */" />
-                <marker date="1568775254269" expanded="true" signature="1513:1744" ph="/// Determines if the message received is valid. ... " />
-                <marker date="1568775254269" expanded="true" signature="1792:1883" ph="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/WintTail/Program.cs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="420">
-              <caret line="28" column="14" lean-forward="true" selection-start-line="28" selection-start-column="14" selection-end-line="28" selection-end-column="14" />
-              <folding>
-                <marker date="1568775715568" expanded="true" signature="36:1105" ph="{...}" />
-                <marker date="1568775715568" expanded="true" signature="43:1103" ph="Program" />
-                <marker date="1568775715568" expanded="true" signature="76:1088" ph="{...}" />
-                <marker date="1568775715568" expanded="true" signature="172:1082" ph="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/WintTail/ConsoleWriterActor.cs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="435">
-              <caret line="30" column="33" lean-forward="true" selection-start-line="30" selection-start-column="33" selection-end-line="30" selection-end-column="33" />
-              <folding>
-                <marker date="1568773310777" expanded="false" signature="6:31" ph="..." />
-                <marker date="1568773310777" expanded="true" signature="50:995" ph="{...}" />
-                <marker date="1568773310777" expanded="true" signature="57:209" ph="/// Actor responsible for serializing message writes to the console. ... " />
-                <marker date="1568773310777" expanded="true" signature="253:993" ph="{...}" />
-                <marker date="1568773310777" expanded="true" signature="317:987" ph="{...}" />
-                <marker date="1568773310777" expanded="true" signature="356:930" ph="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
-  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/WintTail/Messages.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/WintTail/ValidationActor.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/WintTail/Program.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Program.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/25254120-D961-4D31-8377-7837093F879F/6d/98434770/UntypedActor.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/WintTail/ActorMetaData.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/WintTail/Program.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/WintTail/FileObserver.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/WintTail/FileValidatorActor.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/WintTail/TailCoordinatorActor.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/WintTail/Messages.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/WintTail/TailActor.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/WintTail/ConsoleWriterActor.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/WintTail/ConsoleReaderActor.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
@@ -145,8 +43,15 @@
         <option value="$PROJECT_DIR$/WintTail/Messages.cs" />
         <option value="$PROJECT_DIR$/WintTail/ConsoleWriterActor.cs" />
         <option value="$PROJECT_DIR$/WintTail/ValidationActor.cs" />
+        <option value="$PROJECT_DIR$/WintTail/FileObserver.cs" />
+        <option value="$PROJECT_DIR$/WintTail/WintTail.csproj" />
+        <option value="$PROJECT_DIR$/WintTail/TailCoordinatorActor.cs" />
+        <option value="$PROJECT_DIR$/WintTail/ss.cs" />
+        <option value="$PROJECT_DIR$/WintTail/ActorPath.cs" />
+        <option value="$PROJECT_DIR$/WintTail/FileValidatorActor.cs" />
         <option value="$PROJECT_DIR$/WintTail/Program.cs" />
         <option value="$PROJECT_DIR$/WintTail/ConsoleReaderActor.cs" />
+        <option value="$PROJECT_DIR$/WintTail/TailActor.cs" />
       </list>
     </option>
   </component>
@@ -164,42 +69,25 @@
     <option name="width" value="2405" />
     <option name="height" value="1306" />
   </component>
+  <component name="ProjectId" id="1R0rhSZ51ymMBWxIOE5nzD7zeZy" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
   </component>
-  <component name="ProjectView">
-    <navigator currentView="SolutionExplorer" proportions="" version="1">
-      <foldersAlwaysOnTop value="true" />
-    </navigator>
-    <panes>
-      <pane id="SolutionExplorer">
-        <subPane>
-          <expand>
-            <path>
-              <item name="" type="784c90a0:SolutionExplorerRootNode" />
-              <item name="WinTail" type="24d0babc:SolutionExplorerModelNode" />
-            </path>
-            <path>
-              <item name="" type="784c90a0:SolutionExplorerRootNode" />
-              <item name="WinTail" type="24d0babc:SolutionExplorerModelNode" />
-              <item name="WintTail" type="24d0babc:SolutionExplorerModelNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-        <option name="show-all-files" value="false" />
-      </pane>
-      <pane id="FileSystemExplorer" />
-      <pane id="AssemblyExplorer" />
-    </panes>
-  </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="Rider.DefaultBreakpoints.AreToggled" value="true" />
     <property name="Rider.ProjectViewActivator.IsNotFirstRun" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -217,9 +105,9 @@
     <configuration name="Default" type="DotNetProject" factoryName=".NET Project">
       <option name="EXE_PATH" value="$PROJECT_DIR$/WintTail/bin/Debug/netcoreapp2.2/WintTail.dll" />
       <option name="PROGRAM_PARAMETERS" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/WintTail" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/WintTail/bin/Debug/netcoreapp2.2" />
       <option name="PASS_PARENT_ENVS" value="1" />
-      <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <option name="USE_EXTERNAL_CONSOLE" value="1" />
       <option name="USE_MONO" value="0" />
       <option name="RUNTIME_ARGUMENTS" value="" />
       <option name="PROJECT_PATH" value="$PROJECT_DIR$/WintTail/WintTail.csproj" />
@@ -233,6 +121,9 @@
       </method>
     </configuration>
   </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="bf29aca9-20dc-4148-be8a-4b943bc0c158" name="Default Changelist" comment="" />
@@ -242,56 +133,29 @@
       <updated>1568771924125</updated>
       <workItem from="1568771928553" duration="582000" />
       <workItem from="1568772618263" duration="2485000" />
+      <workItem from="1568814978197" duration="2678000" />
+      <workItem from="1568832496027" duration="2319000" />
     </task>
     <servers />
   </component>
-  <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="3067000" />
-  </component>
-  <component name="TodoView">
-    <todo-panel id="selected-file">
-      <is-autoscroll-to-source value="true" />
-    </todo-panel>
-    <todo-panel id="all">
-      <are-packages-shown value="true" />
-      <is-autoscroll-to-source value="true" />
-    </todo-panel>
-  </component>
-  <component name="ToolWindowManager">
-    <frame x="0" y="23" width="2560" height="1363" extended-state="6" />
-    <editor active="true" />
-    <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1938046" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info id="Azure Explorer" order="2" />
-      <window_info id="Favorites" order="3" side_tool="true" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" />
-      <window_info anchor="bottom" id="Debug" order="3" visible="true" weight="0.33202204" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="NuGet" order="7" weight="0.32985783" />
-      <window_info anchor="bottom" id="Performance Profiler" order="8" />
-      <window_info anchor="bottom" id="Docker" order="9" />
-      <window_info anchor="bottom" id="Azure Activity Log" order="10" />
-      <window_info anchor="bottom" id="Version Control" order="11" />
-      <window_info anchor="bottom" id="Database Changes" order="12" />
-      <window_info anchor="bottom" id="Unit Tests" order="13" />
-      <window_info anchor="bottom" id="Terminal" order="14" />
-      <window_info anchor="bottom" id="Event Log" order="15" side_tool="true" />
-      <window_info anchor="bottom" id="Build" order="16" weight="0.3296617" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Errors In Solution" order="3" />
-      <window_info anchor="right" id="Database" order="4" />
-      <window_info anchor="right" id="Unit Tests Coverage" order="5" />
-    </layout>
-  </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="LOCAL_CHANGES_DETAILS_PREVIEW_SHOWN" value="true" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -302,144 +166,5 @@
         </breakpoint>
       </breakpoints>
     </breakpoint-manager>
-  </component>
-  <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Program.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="19" column="85" selection-end-line="48" />
-          <folding>
-            <marker date="1568771101810" expanded="false" signature="6:32" ph="..." />
-            <marker date="1568771101810" expanded="true" signature="51:1548" ph="{...}" />
-            <marker date="1568771101810" expanded="true" signature="58:1546" ph="Program" />
-            <marker date="1568771101810" expanded="true" signature="91:1531" ph="{...}" />
-            <marker date="1568771101810" expanded="true" signature="187:854" ph="{...}" />
-            <marker date="1568771101810" expanded="true" signature="210:277" ph="/* initialize MyActorSystem ... */" />
-            <marker date="1568771101810" expanded="true" signature="325:622" ph="/* time to make your first actors! ... */" />
-            <marker date="1568771101810" expanded="true" signature="637:795" ph="/* tell console reader to begin ... */" />
-            <marker date="1568771101810" expanded="true" signature="903:1525" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/WinTail.sln">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="17" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/WinTail.csproj">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="34" selection-start-line="11" selection-start-column="34" selection-end-line="11" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/25254120-D961-4D31-8377-7837093F879F/6d/98434770/UntypedActor.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="26" column="41" selection-start-line="26" selection-start-column="41" selection-end-line="26" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/WintTail/Messages.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="938">
-          <caret line="68" column="5" selection-start-line="68" selection-start-column="5" selection-end-line="68" selection-end-column="5" />
-          <folding>
-            <marker date="1568772960542" expanded="true" signature="17:1565" ph="{...}" />
-            <marker date="1568772960542" expanded="true" signature="45:1563" ph="{...}" />
-            <marker date="1568772960542" expanded="true" signature="60:266" ph="Neutral/system messages" />
-            <marker date="1568772960542" expanded="true" signature="101:186" ph="/// Marker class to continue processing. ... " />
-            <marker date="1568772960542" expanded="true" signature="226:246" ph="{...}" />
-            <marker date="1568772960542" expanded="true" signature="276:649" ph="Success messages" />
-            <marker date="1568772960542" expanded="true" signature="310:411" ph="/// Base class for signalling that user input was valid. ... " />
-            <marker date="1568772960542" expanded="true" signature="445:629" ph="{...}" />
-            <marker date="1568772960542" expanded="true" signature="502:563" ph="{...}" />
-            <marker date="1568772960542" expanded="true" signature="659:1557" ph="Error messages" />
-            <marker date="1568772960542" expanded="true" signature="691:794" ph="/// Base class for signalling that user input was invalid. ... " />
-            <marker date="1568772960542" expanded="true" signature="826:1008" ph="{...}" />
-            <marker date="1568772960542" expanded="true" signature="881:942" ph="{...}" />
-            <marker date="1568772960542" expanded="true" signature="1018:1093" ph="/// User provided blank input. ... " />
-            <marker date="1568772960542" expanded="true" signature="1142:1254" ph="{...}" />
-            <marker date="1568772960542" expanded="true" signature="1216:1244" ph="{...}" />
-            <marker date="1568772960542" expanded="true" signature="1264:1374" ph="/// User provided invalid input (currently, input w/ odd ## chars) ... " />
-            <marker date="1568772960542" expanded="true" signature="1424:1537" ph="{...}" />
-            <marker date="1568772960542" expanded="true" signature="1499:1527" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/WintTail/ConsoleWriterActor.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="435">
-          <caret line="30" column="33" lean-forward="true" selection-start-line="30" selection-start-column="33" selection-end-line="30" selection-end-column="33" />
-          <folding>
-            <marker date="1568773310777" expanded="false" signature="6:31" ph="..." />
-            <marker date="1568773310777" expanded="true" signature="50:995" ph="{...}" />
-            <marker date="1568773310777" expanded="true" signature="57:209" ph="/// Actor responsible for serializing message writes to the console. ... " />
-            <marker date="1568773310777" expanded="true" signature="253:993" ph="{...}" />
-            <marker date="1568773310777" expanded="true" signature="317:987" ph="{...}" />
-            <marker date="1568773310777" expanded="true" signature="356:930" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/WintTail/ValidationActor.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="601">
-          <caret line="43" column="59" lean-forward="true" selection-start-line="43" selection-start-column="59" selection-end-line="43" selection-end-column="59" />
-          <folding>
-            <marker date="1568775254269" expanded="true" signature="58:1891" ph="{...}" />
-            <marker date="1568775254269" expanded="true" signature="65:167" ph="/// Actor that validates user input and signals result to others. ... " />
-            <marker date="1568775254269" expanded="true" signature="215:1889" ph="{...}" />
-            <marker date="1568775254269" expanded="true" signature="339:413" ph="{...}" />
-            <marker date="1568775254269" expanded="true" signature="472:1503" ph="{...}" />
-            <marker date="1568775254269" expanded="true" signature="566:773" ph="{...}" />
-            <marker date="1568775254269" expanded="true" signature="790:1313" ph="{...}" />
-            <marker date="1568775254269" expanded="true" signature="873:1069" ph="{...}" />
-            <marker date="1568775254269" expanded="true" signature="1090:1299" ph="{...}" />
-            <marker date="1568775254269" expanded="true" signature="1327:1432" ph="/* tell sender to continue doing its thing ... */" />
-            <marker date="1568775254269" expanded="true" signature="1513:1744" ph="/// Determines if the message received is valid. ... " />
-            <marker date="1568775254269" expanded="true" signature="1792:1883" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/WintTail/ConsoleReaderActor.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="474">
-          <caret line="45" column="9" lean-forward="true" selection-start-line="45" selection-start-column="9" selection-end-line="45" selection-end-column="9" />
-          <folding>
-            <marker date="1568775883488" expanded="false" signature="6:31" ph="..." />
-            <marker date="1568775883488" expanded="true" signature="50:1727" ph="{...}" />
-            <marker date="1568775883488" expanded="true" signature="57:220" ph="/// Actor responsible for reading FROM the console.  ... " />
-            <marker date="1568775883488" expanded="true" signature="264:1725" ph="{...}" />
-            <marker date="1568775883488" expanded="true" signature="478:546" ph="{...}" />
-            <marker date="1568775883488" expanded="true" signature="605:774" ph="{...}" />
-            <marker date="1568775883488" expanded="true" signature="661:728" ph="{...}" />
-            <marker date="1568775883488" expanded="true" signature="818:1402" ph="{...}" />
-            <marker date="1568775883488" expanded="true" signature="1013:1237" ph="{...}" />
-            <marker date="1568775883488" expanded="true" signature="1044:1155" ph="/* if user typed ExitCommand, shut down the entire actor ... */" />
-            <marker date="1568775883488" expanded="true" signature="1251:1348" ph="/* otherwise, just hand message off to validation actor ... */" />
-            <marker date="1568775883488" expanded="true" signature="1446:1719" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/WintTail/Program.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="28" column="14" lean-forward="true" selection-start-line="28" selection-start-column="14" selection-end-line="28" selection-end-column="14" />
-          <folding>
-            <marker date="1568775715568" expanded="true" signature="36:1105" ph="{...}" />
-            <marker date="1568775715568" expanded="true" signature="43:1103" ph="Program" />
-            <marker date="1568775715568" expanded="true" signature="76:1088" ph="{...}" />
-            <marker date="1568775715568" expanded="true" signature="172:1082" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
   </component>
 </project>
