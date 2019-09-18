@@ -17,6 +17,7 @@
           </e>
         </e>
         <e p="Program.cs" t="Include" />
+        <e p="ValidationActor.cs" t="Include" />
         <e p="WintTail.csproj" t="IncludeRecursive" />
       </e>
     </e>
